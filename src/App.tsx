@@ -19,7 +19,7 @@ export interface ChildrenProps {
 
 export const App = () => {
 
-    return <Container fluid className="p-0 bg-primary">
+    return <Container fluid className="p-0 bg-dark">
         <ProvideAuth>
             <Router>
                 <Switch>

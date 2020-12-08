@@ -1,12 +1,13 @@
 import React from 'react'
+import logo from '../static/Logo.png'
 
 export const Logo = () => {
     return (
         <img
-            alt=""
-            src="https://via.placeholder.com/150x50"
-            width="170"
-            height="50"
+            alt="Logo"
+            src={logo}
+            width="200"
+            height="65"
         />
     )
 }
