@@ -55,38 +55,38 @@ export const Login = () => {
         <Card border="light" className="shadow-lg my-5">
             <Card.Header>
                 <Card.Title className="text-center h4">
-                    Inloggen
+                    Login
                 </Card.Title>
             </Card.Header>
             <Card.Body>
                 <Form onSubmit={login}>
                     <Form.Group controlId="formBasicEmail">
-                        <Form.Label>Emailadres</Form.Label>
+                        <Form.Label>Emailaddress</Form.Label>
                         <Form.Control 
                             required
                             name="email"
                             type="email" 
-                            placeholder="Emailadres" 
+                            placeholder="Emailaddress" 
                             value={state.email}
                             onChange={handleChange} 
                         />
                         <Form.Control.Feedback type="invalid">
-                            Gebruikersnaam onjuist.
+                            Invalid emailaddress.
                         </Form.Control.Feedback>
                     </Form.Group>
 
                     <Form.Group controlId="formBasicPassword">
-                        <Form.Label>Wachtwoord</Form.Label>
+                        <Form.Label>Password</Form.Label>
                         <Form.Control 
                             required 
                             name="password"
                             type="password" 
-                            placeholder="Wachtwoord" 
+                            placeholder="Password" 
                             value={state.password}
                             onChange={handleChange} 
                         />
                         <Form.Control.Feedback type="invalid">
-                            Wachtwoord onjuist.
+                            Invalid Password.
                         </Form.Control.Feedback>
                     </Form.Group>
 
@@ -94,14 +94,14 @@ export const Login = () => {
                         <Form.Check 
                             name="rememberMe"
                             type="checkbox" 
-                            label="Onthoud Gebruikersnaam"
+                            label="Remember Me"
                             defaultChecked={state.rememberMe}
                             onChange={handleChange} 
                         />
                     </Form.Group>
 
                     <Button variant="primary" block type="submit" onClick={login}>
-                        Inloggen
+                        Login
                     </Button>
                 </Form>
                 {/* <Card.Footer className="text-muted hidden">
