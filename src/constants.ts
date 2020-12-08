@@ -7,4 +7,4 @@ export enum Role {
     APPLICATION = 'APPLICATION',
 }
 
-export const API_URL = ""
+export const API_URL = "https://api.bouwton.nu"

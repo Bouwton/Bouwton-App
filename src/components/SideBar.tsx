@@ -23,7 +23,7 @@ export const SideBar = (props: ColProps) => {
       <Nav defaultActiveKey="/" className="flex-column">
         <Navbar.Brand href="/">
           <div className="d-inline-block align-top" >
-            <Logo />
+            <Logo width={170} />
           </div>              
         </Navbar.Brand>
         <Link className={"nav-link" + (location.pathname == "/" ? " active" : "")}  to="/"><FontAwesomeIcon icon="tachometer-alt" /> Dashboard</Link>

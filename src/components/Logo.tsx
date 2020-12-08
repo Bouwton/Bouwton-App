@@ -1,13 +1,12 @@
 import React from 'react'
-import logo from '../static/Logo.png'
+import logo from '../static/logowit.png'
 
-export const Logo = () => {
+export const Logo = ({width = 350}) => {
     return (
         <img
-            alt="Logo"
+            alt="Bouwton"
             src={logo}
-            width="200"
-            height="65"
+            width={width}
         />
     )
 }
