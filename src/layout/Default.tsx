@@ -18,7 +18,7 @@ export const Default = (props: ChildrenProps) => {
             <Col className="p-0 bg-white">
                 <Container fluid className="p-0 d-flex flex-column" style={{minHeight: '100vh'}}>
                     <TopBar />
-                    <Row className="flex-fill p-2 m-0">
+                    <Row className="flex-fill p-2 m-0 mt-3">
                         {props.children}
                     </Row>
                     <Footer md={2} className={"align-self-last p-2 m-0 mt-3"} />

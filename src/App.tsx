@@ -10,6 +10,7 @@ import { ProvideAuth } from "./helpers/Auth";
 import { HomePage } from "./pages/HomePage";
 import { Events } from "./pages/Events";
 import { Users } from "./pages/Users";
+import { Styles } from "./constants";
 
 library.add(faUserCircle);
 
@@ -19,7 +20,7 @@ export interface ChildrenProps {
 
 export const App = () => {
 
-    return <Container fluid className="p-0 bg-dark">
+    return <Container fluid className={"p-0 bg-" + Styles.App.bg}>
         <ProvideAuth>
             <Router>
                 <Switch>
