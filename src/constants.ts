@@ -8,3 +8,16 @@ export enum Role {
 }
 
 export const API_URL = "https://api.bouwton.nu"
+export const Styles = {
+    App: {
+        bg: "dark"
+    },
+    TopBar: {
+        bg: "light",
+        variant: "light"
+    },
+    SideBar: {
+        bg: "dark",
+        variant: "dark"
+    },
+}
