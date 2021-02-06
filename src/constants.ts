@@ -10,14 +10,14 @@ export enum Role {
 export const API_URL = "https://api.bouwton.nu"
 export const Styles = {
     App: {
-        bg: "dark"
+        bg: "primary"
     },
     TopBar: {
         bg: "light",
         variant: "light"
     },
     SideBar: {
-        bg: "dark",
+        bg: "primary",
         variant: "dark"
     },
 }
