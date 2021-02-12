@@ -36,6 +36,8 @@ export enum EventType{
     COMMENT = 'COMMENT',
     PRODUCTS_RECEIVED = 'PRODUCTS_RECEIVED',
     DELIVERY = 'DELIVERY',
+    INVOICE_IMPORT_COMPLETED = 'INVOICE_IMPORT_COMPLETED',
+    ORDER_IMPORT_COMPLETED = 'ORDER_IMPORT_COMPLETED',
 }
 
 export const Events = () => {
@@ -124,9 +126,17 @@ export const Events = () => {
             return 'Alle producten op voorraad';
           case EventType.DELIVERY:
             return 'Levering';
+          case EventType.INVOICE_IMPORT_COMPLETED:
+            return 'Facturen Import afgerond';
+          case EventType.ORDER_IMPORT_COMPLETED:
+            return 'Order Import afgerond';
           default:
             return '';
         }
+    }
+
+    let textColor = (type: EventType): string => {
+        return typeClass(type) == '' ? 'black' : 'white'
     }
 
     return <div className="container">
@@ -154,7 +164,7 @@ export const Events = () => {
             <Loader content="Gebeurtenissen" /> :
             <div className="events">
                 {state.events.map((item: eventModel) =>
-                    <Card key={item.id} className={"mb-3"} /*border={typeClass(item.type)}*/ bg={typeClass(item.type)} text="white" >
+                    <Card key={item.id} className={"mb-3"} /*border={typeClass(item.type)}*/ bg={typeClass(item.type)} text={textColor(item.type)} >
                         <Card.Header>{typeString(item.type)}</Card.Header>
                         <Card.Body>
                             {item.invoiceId && <Link to={"/invoices/" + item.invoiceId} className="btn btn-light btn-sm mr-1">
@@ -176,7 +186,7 @@ export const Events = () => {
                                 <FontAwesomeIcon icon="user-tie" /> {"gebruiker: " + item.userId}
                             </Link>}
                         </Card.Body>
-                        <Card.Footer className="text-white">{moment(item.dateTime).format("DD-MM-YYYY HH:mm:ss")}</Card.Footer>
+                        <Card.Footer className={"text-" + textColor(item.type)}>{moment(item.dateTime).format("DD-MM-YYYY HH:mm:ss")}</Card.Footer>
                     </Card>
                 )}
             </div>
